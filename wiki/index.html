@@ -499,11 +499,21 @@ Error message and password prompt
 
 <li>$:/UploadName</li>
 
+<li>Cmder中使用WSL的Bash时工作目录</li>
+
 <li>flask-socketio</li>
+
+<li>nltk</li>
+
+<li>nvm</li>
+
+<li>scrapy</li>
 
 <li>socket.io</li>
 
 <li>TiddlyWiki</li>
+
+<li>virtualenv</li>
 
 <li>VSCode在Linux下键盘映射失败的解决</li>
 
@@ -13237,8 +13247,8 @@ Error message and password prompt
 <div created="20180521065032388" creator="流水鸣泉" modified="20180521065032388" modifier="流水鸣泉" title="$:/state/plugin-info-1012887646-$:/plugins/tgrosinger/tw5-checklist--1517501809">
 <pre>Usage</pre>
 </div>
-<div created="20180523120650424" creator="流水鸣泉" modified="20180604094601410" modifier="流水鸣泉" title="$:/state/showeditpreview">
-<pre>yes</pre>
+<div created="20180523120650424" creator="流水鸣泉" modified="20180605092612087" modifier="流水鸣泉" title="$:/state/showeditpreview">
+<pre>no</pre>
 </div>
 <div created="20180521055112386" creator="流水鸣泉" modified="20180521055121375" modifier="流水鸣泉" title="$:/state/sidebar">
 <pre>yes</pre>
@@ -13270,7 +13280,7 @@ Error message and password prompt
 <div created="20180521052723045" creator="y" modified="20180521052726989" modifier="y" title="$:/status/UserName">
 <pre>流水鸣泉</pre>
 </div>
-<div list="科研工程化环境 首页" title="$:/StoryList">
+<div list="首页" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180521052853094" creator="流水鸣泉" modified="20180604080318406" modifier="流水鸣泉" title="$:/temp/advancedsearch">
@@ -13985,7 +13995,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20180521055415940" creator="流水鸣泉" modified="20180521071525693" modifier="流水鸣泉" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre></pre>
 </div>
-<div created="20180524050559069" creator="流水鸣泉" modified="20180604080318406" modifier="流水鸣泉" title="$:/temp/search">
+<div created="20180524050559069" creator="流水鸣泉" modified="20180605092528102" modifier="流水鸣泉" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20180521071057092" creator="流水鸣泉" modified="20180521071057092" modifier="流水鸣泉" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.17/index.html" url="https://tiddlywiki.com/library/v5.1.17/index.html">
@@ -14126,14 +14136,24 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20180528020248476" creator="流水鸣泉" modified="20180528020256478" modifier="流水鸣泉" title="$:/UploadName">
 <pre></pre>
 </div>
-<div created="20180523111810792" creator="流水鸣泉" modified="20180523130459716" modifier="流水鸣泉" tags="python flask 编程 服务器" title="flask-socketio">
+<div created="20180605054854993" creator="流水鸣泉" modified="20180605055517029" modifier="流水鸣泉" tags="" title="Cmder中使用WSL的Bash时工作目录">
+<pre>设置{uow:bash}的参数为
+`%windor%\system32\bash.exe -new_console:d:&quot;%CMDER_START%&quot;`，从而使Cmder Here功能和直接从VSCode中打开Cmder使，都能定位到正确的工作目录。
+
+然而这样会导致直接从开始菜单中启动Cmder时出问题，找不到`CMDER_START`环境变量。
+手动在系统环境变量里加一个`CMDER_START`，值设置为启动时想要的目录即可（''必须是绝对路径''）
+
+!!参考
+* https://github.com/cmderdev/cmder/issues/1063</pre>
+</div>
+<div created="20180523111810792" creator="流水鸣泉" modified="20180605063224255" modifier="流水鸣泉" tags="python flask 编程 服务器" title="flask-socketio">
 <pre>用于在[[flask]]中使用[[socket.io]]库通过WebSocket方式和前端通信的库。
 
 安装`$ pip install flask-socketio`
 
 
 &lt;&lt;&lt;
-注意：如果没有安装[[eventlet]]，flask-socketio默认会使用flask本身的服务器，这时候使用的是长轮询(long-polling)而非WebSocket，而这时候的debugMode有莫名其妙的bug。
+''注意''：如果没有安装[[eventlet]]，flask-socketio默认会使用flask本身的服务器，这时候使用的是长轮询(long-polling)而非WebSocket，而这时候的debugMode有莫名其妙的bug。
 &lt;&lt;&lt;
 
 初始化：
@@ -14163,6 +14183,47 @@ socketio.run(app, host='0.0.0.0', port=9999, debug=True)
 * [[Vue+WebSocket+ES6+Canvas制作【你画我猜】小游戏|https://segmentfault.com/a/1190000005804860]]
 * [[Vue2+Nodejs+WebSocket完成你画我猜多人在线游戏|https://diamondfsd.com/vue2-nodejs-websocket-ygid]]</pre>
 </div>
+<div created="20180605063746345" creator="流水鸣泉" modified="20180605065427188" modifier="流水鸣泉" tags="编程 python" title="nltk">
+<pre>自然语言处理工具包。
+
+!! 安装
+`pip install nltk`
+
+安装完后要下载语料库：
+
+```python
+import nltk
+nltk.download()
+```
+
+!! 环境变量
+语料库的位置`NLTK_DATA`。
+
+Windows下默认在`C:\Users\xx\AppData\Roaming\nltk_data`</pre>
+</div>
+<div created="20180605060645202" creator="流水鸣泉" modified="20180605063045718" modifier="流水鸣泉" tags="工具 前端 Javascript" title="nvm">
+<pre>nodejs的版本管理工具。
+
+!! 安装
+* windows: https://github.com/coreybutler/nvm-windows/releases
+* linux: `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash`
+
+!! 使用
+* 当前可以安装的node版本：https://nodejs.org/download/release
+
+&gt; 在windows下可以直接用`nvm list available`查看（不完整）；Linux下可以用`nvm ls-remote`查看，但是极慢，还是直接看网页比较好。
+
+* 安装node：`nvm install x.x.x`
+&gt; 在windows下可以直接`nvm install latest`安装最新版。
+
+* 激活node：`nvm use x.x.x`</pre>
+</div>
+<div created="20180605092554051" creator="流水鸣泉" modified="20180605092652498" modifier="流水鸣泉" tags="编程 python 爬虫 数据" title="scrapy">
+<pre>Python的爬虫框架
+
+!! 参考
+* [[Scrapy文档|http://scrapy-chs.readthedocs.io/zh_CN/0.24/index.html]]</pre>
+</div>
 <div created="20180523122152595" creator="流水鸣泉" modified="20180523122728304" modifier="流水鸣泉" tags="前端 Javascript HTTP 编程" title="socket.io">
 <pre>WebScoket的封装
 
@@ -14179,6 +14240,26 @@ socketio.run(app, host='0.0.0.0', port=9999, debug=True)
 
 技巧：http://tw5magick.tiddlyspot.com/</pre>
 </div>
+<div created="20180605061831746" creator="流水鸣泉" modified="20180605091022441" modifier="流水鸣泉" tags="python 工具" title="virtualenv">
+<pre>Python工程环境管理。
+为每个程序构造一个独立的包环境。
+
+在这个环境中安装的包不会被安装到全局环境，所以这时候用`pip freeze`是可以挑出只被这个环境使用的包的。
+
+!! 安装
+`python3 -m pip install virtualenv`
+
+!! 使用
+# 新建环境：在工作目录下执行`virtualenv --no-site-packages venv`，可以用`--python=python3.6`设定python的版本
+# 激活环境：`source env/bin/activate`
+# 保存当前环境下的包列表：`pip freeze &gt; requirements.txt`
+# 退出环境：`deactivate`
+
+
+!! 参考
+* [[廖雪峰-Python教程-virtualenv|https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432712108300322c61f256c74803b43bfd65c6f8d0d0000]]
+</pre>
+</div>
 <div created="20180528020121251" creator="流水鸣泉" modified="20180528020237328" modifier="流水鸣泉" tags="VSCode 工具 Linux" title="VSCode在Linux下键盘映射失败的解决">
 <pre>在配置文件里加入&quot;keyboard&quot;: &quot;keyCode&quot;
 
@@ -14191,13 +14272,13 @@ socketio.run(app, host='0.0.0.0', port=9999, debug=True)
 !! 教程
 * [[WebSocket教程 —— 阮一峰|http://www.ruanyifeng.com/blog/2017/05/websocket.html]]</pre>
 </div>
-<div created="20180604080326102" creator="流水鸣泉" modified="20180604102532877" modifier="流水鸣泉" tags="知识管理 工具" title="科研工程化环境">
+<div created="20180604080326102" creator="流水鸣泉" modified="20180605070145081" modifier="流水鸣泉" tags="知识管理 工具" title="科研工程化环境">
 <pre>!! 工具体系
 !!! 数据处理与后端
 * Python 3
 ** 项目构建
 *** 虚拟运行环境：[[virtualenv]]
-*** 依赖管理：[[pipreqs]]
+*** 依赖管理：`pip freeze`(结合[[virtualenv]]) or [[pipreqs]]
 ** 常用库：
 *** 图数据分析：NetworkX
 ** Web框架：[[Flask]] + [[flask-socketio]]
@@ -14207,6 +14288,7 @@ socketio.run(app, host='0.0.0.0', port=9999, debug=True)
 ** 爬虫：[[scrapy]]
 ** 代码规范：[[Python风格指南|http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/]]
 * Node.js
+** 用[[nvm]]管理
 ** Web框架：KoaJS
 ** 爬虫：CheerIO
 
