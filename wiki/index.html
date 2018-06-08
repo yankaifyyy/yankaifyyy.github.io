@@ -175,6 +175,8 @@ Error message and password prompt
 
 <li>$:/config/Plugins/Disabled/$:/themes/tiddlywiki/centralised</li>
 
+<li>$:/config/RelinkOnRename</li>
+
 <li>$:/config/Tiddlers/TitleLinks</li>
 
 <li>$:/config/Toolbar/ButtonClass</li>
@@ -517,7 +519,15 @@ Error message and password prompt
 
 <li>Cypher-Relationship语法</li>
 
+<li>ECharts</li>
+
+<li>ECharts wordcloud in Vue</li>
+
 <li>flask-socketio</li>
+
+<li>MySubHistoryList</li>
+
+<li>MySubStoryList</li>
 
 <li>Neo4J</li>
 
@@ -546,6 +556,10 @@ Error message and password prompt
 <li>VSCode在Linux下键盘映射失败的解决</li>
 
 <li>WebSocket</li>
+
+<li>WordCloud.Component.ts</li>
+
+<li>WordCloud.Component.vue</li>
 
 <li>科研工程化环境</li>
 
@@ -621,6 +635,9 @@ Error message and password prompt
 </div>
 <div created="20180521060528696" creator="流水鸣泉" modified="20180521060529674" modifier="流水鸣泉" title="$:/config/Plugins/Disabled/$:/themes/tiddlywiki/centralised">
 <pre>no</pre>
+</div>
+<div created="20180608103619449" creator="流水鸣泉" modified="20180608103619449" modifier="流水鸣泉" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
 </div>
 <div created="20180521054848703" creator="流水鸣泉" modified="20180521054850368" modifier="流水鸣泉" title="$:/config/Tiddlers/TitleLinks">
 <pre>yes</pre>
@@ -13286,7 +13303,7 @@ Error message and password prompt
 <div created="20180521065032388" creator="流水鸣泉" modified="20180521065032388" modifier="流水鸣泉" title="$:/state/plugin-info-1012887646-$:/plugins/tgrosinger/tw5-checklist--1517501809">
 <pre>Usage</pre>
 </div>
-<div created="20180523120650424" creator="流水鸣泉" modified="20180606105029668" modifier="流水鸣泉" title="$:/state/showeditpreview">
+<div created="20180523120650424" creator="流水鸣泉" modified="20180608102310894" modifier="流水鸣泉" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
 <div created="20180521055112386" creator="流水鸣泉" modified="20180521055121375" modifier="流水鸣泉" title="$:/state/sidebar">
@@ -14244,6 +14261,50 @@ path =
 * 匹配并命名：`-[r:Write]-&gt;`
 * 匹配特定边：`-[r:Colleague {company: &quot;MS&quot;}]-`</pre>
 </div>
+<div created="20180608100840299" creator="流水鸣泉" modified="20180608103641884" modifier="流水鸣泉" tags="编程 前端 Javascript 可视化" title="ECharts">
+<pre>ECharts 是百度官方出品的基于配置的前端可视化图形库（[[http://echarts.baidu.com/]]），底层是ZRender。有大量现成的图形可以使用，也可以从它的[[Gallery|http://gallery.echartsjs.com]]得到大量的现成的图的实现。
+
+!!! 安装
+
+直接在npm/yarn安装ECharts和它的types定义：
+
+```bash
+yarn add echarts
+yarn add @types/echarts
+```
+
+!!! 使用
+
+在要画图的容器中初始化，并设置option：
+
+```javascript
+var chart = echarts.init(el);
+chart.setOption({...});
+```
+!!! 启用svg
+ECharts默认使用[[HTMLCanvas]]进行渲染，但是在做论文项目时，大部分时候需要用[[svg]]以保证文章中图片的矢量性。
+可以启用ECharts的svg renderer，在初始化时：
+
+```javascript
+var chart = echarts.init(el, null, {renderer: 'svg'});
+```
+
+!!! ECharts的工具集合：
+* https://github.com/apache/incubator-echarts
+
+!! 例子
+
+* [[ECharts wordcloud in Vue]]</pre>
+</div>
+<div created="20180608102312206" creator="流水鸣泉" modified="20180608103621068" modifier="流水鸣泉" tags="echarts vue echarts-example" title="ECharts wordcloud in Vue" type="text/vnd.tiddlywiki">
+<pre>!! ~WordCloud.Component.vue
+
+{{WordCloud.Component.vue}}
+
+!! ~WordCloud.Component.ts
+
+{{WordCloud.Component.ts}}</pre>
+</div>
 <div created="20180523111810792" creator="流水鸣泉" modified="20180605063224255" modifier="流水鸣泉" tags="python flask 编程 服务器" title="flask-socketio">
 <pre>用于在[[flask]]中使用[[socket.io]]库通过WebSocket方式和前端通信的库。
 
@@ -14280,6 +14341,46 @@ socketio.run(app, host='0.0.0.0', port=9999, debug=True)
 !! 例子
 * [[Vue+WebSocket+ES6+Canvas制作【你画我猜】小游戏|https://segmentfault.com/a/1190000005804860]]
 * [[Vue2+Nodejs+WebSocket完成你画我猜多人在线游戏|https://diamondfsd.com/vue2-nodejs-websocket-ygid]]</pre>
+</div>
+<div created="20180608103222187" creator="流水鸣泉" current-tiddler="ECharts wordcloud" modified="20180608103254724" modifier="流水鸣泉" title="MySubHistoryList" type="application/json">
+<pre>[
+    {
+        &quot;title&quot;: &quot;ECharts wordcloud&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 523.734375,
+            &quot;left&quot;: 205,
+            &quot;width&quot;: 126.71875,
+            &quot;right&quot;: 331.71875,
+            &quot;bottom&quot;: 540.734375,
+            &quot;height&quot;: 17
+        }
+    },
+    {
+        &quot;title&quot;: &quot;ECharts wordcloud&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 377.734375,
+            &quot;left&quot;: 205,
+            &quot;width&quot;: 126.71875,
+            &quot;right&quot;: 331.71875,
+            &quot;bottom&quot;: 394.734375,
+            &quot;height&quot;: 17
+        }
+    },
+    {
+        &quot;title&quot;: &quot;ECharts wordcloud&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 377.734375,
+            &quot;left&quot;: 205,
+            &quot;width&quot;: 126.71875,
+            &quot;right&quot;: 331.71875,
+            &quot;bottom&quot;: 394.734375,
+            &quot;height&quot;: 17
+        }
+    }
+]</pre>
+</div>
+<div list="" title="MySubStoryList">
+<pre></pre>
 </div>
 <div created="20180606043110764" creator="流水鸣泉" modified="20180606105131543" modifier="流水鸣泉" tags="neo4j 数据库" title="Neo4J">
 <pre>NoSQL数据库，图数据库。
@@ -14491,6 +14592,80 @@ create index on :Person(name)
 
 !! 教程
 * [[WebSocket教程 —— 阮一峰|http://www.ruanyifeng.com/blog/2017/05/websocket.html]]</pre>
+</div>
+<div created="20180608102326952" creator="流水鸣泉" modified="20180608102731984" modifier="流水鸣泉" tags="" title="WordCloud.Component.ts" type="application/javascript">
+<pre>import Vue from 'vue';
+import { Component, Prop, Watch } from 'vue-property-decorator';
+
+import * as echarts from 'echarts';
+import 'echarts-wordcloud';
+
+@Component
+export default class extends Vue {
+    $refs: {
+        view: HTMLDivElement;
+    };
+
+    @Prop() private width: number;
+    @Prop() private height: number;
+
+    @Prop() private data: Array&lt;[string, number]&gt;;
+
+    private chart: echarts.ECharts;
+
+    constructor() {
+        super();
+    }
+
+    mounted() {
+        this.chart = echarts.init(this.$refs.view, null, { renderer: 'svg' });
+    }
+
+    get divStyle() {
+        return {
+            width: `${this.width}px`,
+            height: `${this.height}px`,
+            border: '.1px solid lightgrey'
+        };
+    }
+
+    @Watch('data')
+    private onDataChanged() {
+        this.chart.setOption({
+            tooltip: {
+                show: true
+            },
+            series: [{
+                type: 'wordCloud',
+                sizeRange: [16, 48],
+                shape: 'square',
+                textStyle: {
+                    normal: {
+                        color: () =&gt; '#2578b5',
+                        cursor: 'default'
+                    }
+                },
+                rotationRange: [0, 0],
+                data: this.data.map(d =&gt; {
+                    return {
+                        name: d[0],
+                        value: d[1]
+                    };
+                })
+            }]
+        });
+    }
+}</pre>
+</div>
+<div created="20180608102516569" creator="流水鸣泉" modified="20180608102607880" modifier="流水鸣泉" tags="" title="WordCloud.Component.vue" type="text/vnd.tiddlywiki">
+<pre>```html
+&lt;template&gt;
+    &lt;div ref=&quot;view&quot; :style=&quot;divStyle&quot;&gt;&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script lang=&quot;ts&quot; src=&quot;./WordCloud.Component.ts&quot;&gt;
+&lt;/script&gt;
+```</pre>
 </div>
 <div created="20180604080326102" creator="流水鸣泉" modified="20180605070145081" modifier="流水鸣泉" tags="知识管理 工具" title="科研工程化环境">
 <pre>!! 工具体系
