@@ -1,116 +1,111 @@
-schema: hugoblox/author/v1
-slug: me
+schema: 'hugoblox/author/v1'
+slug: 'me'
 is_owner: true
 name:
-  display: Dr. Alex Johnson
-  given: Alex
-  family: Johnson
-  alternate: ''  # Example: 王伟
-  pronunciation: ''  # Example: Wáng Wěi
-  pronouns: he/him
+    display: '闫凯'
+    given: 'Kai'
+    family: 'Yan'
+    alternate: '闫凯'
+    pronunciation: 'Yán Kǎi'
+    pronouns: ''
 postnominals:
-  - PhD
-  - MIEEE
+    - 'PhD'
 status:
-  icon: "☕️"
-role: Senior AI Research Scientist
-bio: |
-  Alex Johnson is a Senior AI Research Scientist at Meta AI. His research
-  has been published in top conferences like NeurIPS and ICML, with over
-  10,000 citations. Alex is passionate about pushing the boundaries of AI
-  while ensuring ethical development.
-
+    icon: '👨‍💻'
+role: '讲师|特聘青年研究员|硕士生导师'
+bio: '佛山大学特聘青年研究员、讲师及硕士生导师，佛山市电子政务工程技术研究中心副主任。哈工大博士，曾赴微软亚研联合培养，师从赵铁军与洪小文教授。目前聚焦大语言模型应用（如Text-to-SQL、AIGC检测）及数字人文交叉研究。核心参与国家基金及地方政务系统项目，致力于在真实场景中解决实际问题，推动产学研落地。'
 affiliations:
-  - name: Meta AI
-    url: https://ai.meta.com/
-
+    - name: '佛山大学 计算机与人工智能学院'
+      url: 'https://www.fosu.edu.cn/ai/'
 links:
-  - icon: at-symbol
-    url: mailto:alex.johnson@example.com
-    label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
-  - icon: brands/github
-    url: https://github.com/example
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
-
+    - icon: 'at-symbol'
+      url: 'mailto:yankai@fosu.edu.cn'
+      label: '电子邮件'
+    - icon: 'brands/github'
+      url: 'https://github.com/yankaifyyy'
+    - icon: 'academicons/google-scholar'
+      url: 'https://scholar.google.com/citations?user=h76X2sIAAAAJ'
+    - icon: 'academicons/orcid'
+      url: 'https://orcid.org/0000-0002-4960-7108'
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
-
+    - '应用自然语言处理'
+    - '计算语言学'
+    - '大语言模型'
+    - 'Text-to-SQL'
+    - 'AI生成内容检测'
+    - '数字政府'
+    - '数字人文与非物质文化遗产'
+    - '计算文学'
+    - '数据可视化'
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
-    summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
-
+    - degree: '计算机应用博士'
+      institution: '哈尔滨工业大学'
+      start: '2015-09-10'
+      end: '2023-03-22'
+      summary: '师从赵铁军教授，主要研究方向为社交网络可视化与可视分析'
+    - degree: '联合培养博士生'
+      institution: '微软亚洲研究院'
+      start: '2015-06-10'
+      end: '2019-11-10'
+      summary: '联合导师为洪小文教授，主要研究方向为图数据可视化'
+    - degree: '工学学士'
+      institution: '哈尔滨工业大学'
+      start: '2010-09-01'
+      end: '2014-06-27'
+      summary: ''
 experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
-    summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
-    summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
-
+    - role: '研究中心副主任'
+      org: '佛山市电子政务工程技术研究中心'
+      start: '2025-12-25'
+    - role: '大模型与生成专业委员会专委'
+      org: '中国中文信息学会'
+      start: '2023-07-20'
+    - role: '特聘青年研究员|讲师|硕士生导师'
+      org: '佛山大学'
+      start: '2023-04-12'
+      summary: "主要研究方向为应用自然语言处理、大语言模型、数字政府.负责操作系统、深度学习、Web前端开发、数据科学基础等课程。\n"
+    - role: '研究实习生'
+      org: '微软亚洲研究院'
+      start: '2015-06-10'
+      end: '2019-11-10'
+      summary: '以图数据可视化为课题在微软亚洲研究院进行联合培养，联合导师为洪小文教授。'
 skills:
-  - name: Technical Skills
-    items:
-      - label: Python
-        level: 5
-      - label: Machine Learning
-        level: 5
-      - label: Cloud Computing
-        level: 4
-  - name: Research & Communication
-    items:
-      - label: Academic Writing
-        level: 5
-      - label: Conference Presentations
-        level: 4
-      - label: Grant Proposals
-        level: 4
-
+    - name: '工程技术'
+      items:
+          - label: 'Python与数据科学'
+            level: 5
+          - label: '机器学习&深度学习'
+            level: 5
+          - label: '自然语言处理&大语言模型'
+            level: 4
+          - label: 'Web前端开发'
+            level: 5
+          - label: '数据可视化'
+            level: 5
+    - name: '研究与教学'
+      items:
+          - label: '学术写作'
+            level: 4
+          - label: '学术演讲'
+            level: 3
+          - label: '学生指导'
+            level: 4
+          - label: '专业课讲课'
+            level: 5
 languages:
-  - name: English
-    level: 5
-    label: Native
-  - name: Spanish
-    level: 4
-    label: Fluent
-
+    - name: '中文'
+      level: 5
+      label: '母语'
+    - name: '英文'
+      level: 3
+      label: '流畅读写'
 awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
-    icon: hero/trophy
+#     - title: 'Best Paper Award'
+#       awarder: 'NeurIPS'
+#       date: '2022-12-01'
+#       summary: 'Awarded for groundbreaking work on efficient training of large models.'
+#       icon: 'hero/trophy'
+weight: null
+ids:
+    orcid: '0000-0002-4960-7108'
+    google_scholar: 'h76X2sIAAAAJ'

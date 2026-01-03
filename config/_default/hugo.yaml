@@ -12,8 +12,8 @@ baseURL: 'https://example.com/'
 ## LANGUAGE
 ############################
 
-defaultContentLanguage: en
-hasCJKLanguage: false
+defaultContentLanguage: zh
+hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 removePathAccents: true
 
@@ -22,34 +22,34 @@ removePathAccents: true
 ############################
 
 build:
-  writeStats: true
+    writeStats: true
 enableGitInfo: false
 summaryLength: 30
 pagination:
-  pagerSize: 10
+    pagerSize: 10
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
-ignoreFiles: [".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+ignoreFiles: ['.ipynb_checkpoints$', "\\.Rmd$", "\\.Rmarkdown$", '_cache$']
 disableAliases: true
 outputs:
-  home: [HTML, RSS, headers, redirects, backlinks]
-  section: [HTML, RSS]
+    home: [HTML, RSS, headers, redirects, backlinks]
+    section: [HTML, RSS]
 imaging:
-  resampleFilter: lanczos
-  quality: 90
-  anchor: smart
-  hint: picture
+    resampleFilter: lanczos
+    quality: 90
+    anchor: smart
+    hint: picture
 timeout: 600000
 taxonomies:
-  author: authors
-  tag: tags
-  publication_type: publication_types
+    author: authors
+    tag: tags
+    publication_type: publication_types
 markup:
-  _merge: deep
-  highlight:
-    lineNos: false
+    _merge: deep
+    highlight:
+        lineNos: false
 security:
-  _merge: deep
+    _merge: deep
 sitemap:
-  _merge: deep
+    _merge: deep
