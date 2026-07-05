@@ -2,8 +2,7 @@
 title: "MICA-DTI: Multi-Modal Intra and Cross Attention for Drug-Target Interaction Prediction"
 date: 2025-12-15
 publishDate: 2025-12-25
-publication_types:
-  - conference-journal
+publication_types: ["paper-conference"]
 authors: ["Zhihui Yang", "Binfeng Liu", "me", "Yingyu Huo", "Haoliang Qi"]
 publication: "2025 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)"
 publication_short: ""
